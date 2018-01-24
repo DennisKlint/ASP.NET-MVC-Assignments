@@ -13,6 +13,11 @@ namespace LayoutAndViewsAssignment2
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // /FeverCheck
+            routes.MapRoute("FeverCheck",
+                "fevercheck",
+                new { controller = "FeverCheck", action = "Index"});
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

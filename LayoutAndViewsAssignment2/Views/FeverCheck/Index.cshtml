@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Fever Check";
+}
+
+<div id="divScript">
+    @if (ViewBag.Message != null)
+    {
+        <script>
+                window.alert('@ViewBag.Message');
+        </script>
+    }
+</div>
+
+<h2>Fever Check</h2>
+
+<p>Please enter a temperature, and we'll check if you are having a feaver</p>
+
+@using (Html.BeginForm("CalculateTemperatureResult", "FeverCheck",
+                        new { UpdateTargetId = "divScript" }))
+{
+
+    <div id="divTemperatureDetails"></div>
+    <ol>
+        <li>
+            @Html.Label("Temperature")
+            @Html.TextBox("txtTemperature")
+        </li>
+    </ol>
+    <button>Calculate</button>
+}
