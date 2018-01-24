@@ -16,7 +16,7 @@ namespace LayoutAndViewsAssignment2.Models
             }
             else if (temperature <= 35)
             {
-                return "You are not fine, yor temperature is " + temperature + ", you have hypothermia.";
+                return ("You are not fine, your temperature is " + temperature + ", you have hypothermia.");
             }
             else
             {
