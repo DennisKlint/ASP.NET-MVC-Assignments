@@ -1,0 +1,24 @@
+﻿
+
+@{
+    ViewBag.Title = "Guessing Game";
+}
+
+<h2>Guessing Game</h2>
+
+
+<p>Enter a number between 1 and 100.</p>
+
+@using (Html.BeginForm("CheckGuess", "GuessingGame",
+                        new { UpdateTargetId = "divScript" }))
+{
+    <ol>
+        <li>
+            @Html.Label("Guess")
+            @Html.TextBox("txtGuess")
+        </li>
+    </ol>
+    <button>Make Guess</button>
+}
+
+<p>@ViewBag.Message</p>

@@ -18,6 +18,11 @@ namespace LayoutAndViewsAssignment2
                 "fevercheck",
                 new { controller = "FeverCheck", action = "Index"});
 
+            // /GuessingGame
+            routes.MapRoute("GuessingGame",
+                "guessinggame",
+                new { controller = "GuessingGame", action = "Index" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
